@@ -19,7 +19,7 @@ c = 8644591553092014755376734802068613256445337704810609883142607754773899837368
 e = 65537
 ```
 
-The server offer the decrypt any ciphertext given to you but will not send it back if it is equal to the flag.
+The server offers the decrypt any ciphertext given to you but will not send it back if it is equal to the flag.
 
 ```
 $ nc chal.noxale.com 4242
@@ -37,8 +37,8 @@ Textbook RSA is _malleable_, which means we can easily manipulate the _ciphertex
 So in this problem shifted the flag the the left
 ```
 c^d = m mod n
-(c * 2^e) ^d = m * 2^e mod n     # the flag 1 bit the the left
-(c * 2^16e) ^d = m * 2^16e mod n     # the flag 16 bits the the left
+(c * 2^e) ^d = m * 2 mod n     # the flag 1 bit the the left
+(c * 2^16e) ^d = m * 2^16 mod n     # the flag 16 bits the the left
 ```
 
 This simple shift will allow us to decrypt the flag without tripping the check done by the server.
