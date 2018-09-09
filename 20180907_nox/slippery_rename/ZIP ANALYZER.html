@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>ZIP ANALYZER</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="ZIP%20ANALYZER_files/bootstrap.css">
+  <script src="ZIP%20ANALYZER_files/jquery.js"></script>
+  <script src="ZIP%20ANALYZER_files/bootstrap.js"></script>
+</head>
+<body>
+    <br><br><br><br><br>
+    <center>
+        <h1>Welcome to the zip analysis demo!</h1>
+        <h4>our amazing software will take your zip, unpack it and scan it for viruses</h4>
+        <h4>we also track everything you do on this website in our admin control panel that is unbreachable, unhackable</h4>
+        <h4>thanks to our amazing cyber-security team</h4>
+        <h4>How does it work?</h4>
+        <h5>You upload a zip file, our servers extract the file using bash command "unzip -: file.zip"</h5>
+        <h5>the server scans the files inside and returns results!</h5>
+        <h6>We dont believe in containers, all zip files are uploaded to /files/ directory and get extracted there for maximum security!</h6>
+        <br><br><br>
+            <form method="post" enctype="multipart/form-data" action="/upload">
+                <input class="form-control" name="file" accept="application/zip,application/x-zip,application/x-zip-compressed" type="file">
+                <br>
+                <input class="btn btn-primary" value="Upload .zip file" type="submit">
+            </form>
+    </center>
+<!-- Note to self : admin page link : /admin-->
+
+</body></html>

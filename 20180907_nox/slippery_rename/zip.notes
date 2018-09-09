@@ -1,0 +1,7 @@
+$ zip ../admin/key.txt
+
+$ echo VGhpcyBwYWdlIGlzIG9ubHkgYXZhaWxhYmxlIGZvciBBZG1pblBhbmVsIGJyb3dzZXIgdXNlcnMuDQoNCkFkbWluUGFuZWwvMC4xIGFnZW50
+IHVzZXJzIG9ubHkh | base64 -d
+This page is only available for AdminPanel browser users.
+
+AdminPanel/0.1 agent users only!%    
