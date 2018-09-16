@@ -1,0 +1,43 @@
+Category: Forensics-crypto1
+Points: 400
+Feistel Your Eyes on This
+
+Cryptography is an important part of modern-day computer security. If encryption is broken, then there is no security in the world that will keep you safe! From bitcoin to banking, strong cryptography keeps data safe and protected from prying eyes on the network. Though encryption standards have gotten stronger over time, they weren't always so protective. Did you know that some cryptography algorithms can be broken by hand? Certain implementations of the Feistel cipher (a class of block ciphers which includes DES) fall into this unfortunate category.
+
+The encryption algorithm for a Feistel cipher is as follows:
+
+Feistel ciphers are a class of block ciphers with parameters n (half the block length), h (the number of rounds), and l (the key size). Then M = {0,1}2n (the plaintext space), C = {0,1}2n (the ciphertext space), and K = {0,1}l (the key space). A key scheduling algorithm determines subkeys k1,k2,⋯,kh from a key k. Each subkey ki determines a function fi {0,1}n ? {0,1}n.
+
+Encryption takes h rounds:
+
+Plaintext is: m = (m0,m1), where (m0,m1) ? {0,1}n
+
+Round 1: (m0,m1) ? (m1,m2) where m2 = m0 XOR f1(m1 )
+
+Round 2: (m1,m2) ? (m2,m3) where m3 = m1 XOR f2(m2 )
+
+.........
+
+Round h: (mh-1,mh) ? (mh,mh+1) where mh+1 = mh-1 XOR fh(mh )
+
+The ciphertext is c = (mh,mh+1).
+
+For this problem, the function f is defined as: fi (x) = x XOR ki
+The Challenge:
+
+You've been hired to help intercept the communications of the Malicious Advanced Threat group (MAT). Your team has gained one plaintext/ciphertext pair, and they need you to use it to decrypt an important message just received from MAT. Fortunately, MAT was not very careful about the encryption they used! You've decided that the encryption falls under the category of a Feistel cipher (described above). Note that n = 144 and l = 288. You are not given h, the number of rounds of the cipher, but given poor choice of encryption implemented here you're guessing it's low.
+
+Your plan of attack is to find the key using the plaintext/ciphertext pair you already have and then use that key to decrypt the secret message you've gained. Good luck!
+
+(Note that the secret message will be in binary when you decrypt it. You may want to translate that to an ASCII string to make the decrypted message human-readable.)
+Download the file
+
+Extract the downloaded file by using the following password.
+Optional: Check integrity of 7z file by comparing file SHA256 checksum.
+Command to check SHA256 checksum:
+Linux: sha256sum filename.7z
+Windows: certUtil -hashfile filename.7z SHA256
+
+
+> Password: x0ErvRf0VgFpHB17gdx5
+> SHA256 Checksum: 6da6c9487b4e789a8eb4643fef98106d3e80a5de7010e52c2398490c96a614bc
