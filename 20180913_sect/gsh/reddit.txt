@@ -1,0 +1,40 @@
+Submitted 2 months ago by [deleted] to /r/infoleaks
+
+I tried to login... was able to get a shell, but as a restricted user.
+It seems horrendously badly configured. Which is what I would've expected. 
+Fortunately, I found a source code from an old unencrypted backup drive... 
+this one's particularly interesting...
+
+    class AESHash(object):
+
+        def __init__(self, key):
+            self.bs = 16
+            self.key = hashlib.sha256(key.encode()).digest()
+
+        def _pkcs7pad(self, s, blksize=16):
+            missing = abs(len(s) - (len(s) / blksize + 1) * blksize)
+            return s + (chr(missing) * missing)
+
+        def digest(self, user, password):
+            cipher = AES.new(self.key, AES.MODE_ECB)
+            q = 0
+            data = self._pkcs7pad(user + password)
+            for i in xrange(0, len(data), self.bs):
+                block = data[i:i + self.bs]
+                q ^= int(cipher.encrypt(block).encode("hex"), 0x10)
+            return q
+ 
+Their authentication mechanism uses some weird keyed AES-based MAC -- I've 
+never seen anything like it before. I'd say it's insecure, but I don't know
+how to exploit it. Also, it's written in Python. Really? 
+
+Since the HMAC combines credentials in the following way... it's kind of
+moot to give it a try. I've learnt from one-oh-one that h(message | key) is 
+secure... I think.  Motherf... I'll give up; it's late and I need to go to 
+sleep... over and out. For now.
+
+
+-- JD
+
+
+The revolution will not be televised.
