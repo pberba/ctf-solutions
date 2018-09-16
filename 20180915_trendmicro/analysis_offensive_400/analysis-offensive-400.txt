@@ -1,0 +1,44 @@
+
+Challenge
+
+Category: Analysis-offensive
+Points: 400
+Auth Breaker
+
+ACME Corp rolled their own stateless, sockets-based protocol for authenticating and issuing remote commands to a server. They soon realized that their protocol has poor MITM resistance, so they decided to run it over TLS. But there is another major flaw, and it lets any attacker get admin on the server! Find the flaw and code a malicious client.
+
+To keep things simple, we'll run the protocol over TCP with no TLS, but you should assume that you don't have a way to eavesdrop or MITM a conversation between the server and a legitimate user. Also assume the configured passwords are strong enough to withstand brute force attack.
+
+The challenge consists of these files:
+
+    ACME_Protocol.docx : Full protocol specification
+    refClient.py : A reference implementation of the client part of the protocol
+    refServer.py : A reference implementation of the server part of the protocol
+    challengeServer.py : The real server you will need to point your attack at to get the flag. Most of the protocol is implemented within a heavily obfuscated x86 ELF binary named server.
+
+Software prerequisites
+
+To run the challenge server, you will need a Linux machine with 32-bit shared libc installed. If you are running a 64-bit distro, you may need to install a package with a name like libc6-i386 or glibc.i686. In case of any trouble, install Kali Linux 32 Bit 2018.2. This is one distro that we have tested and verified that a clean install already has all prerequisites, including those listed below.
+
+Other prerequisites:
+
+    Python 2.7.x
+    PyCrypto 2.6.1 (pip install pycrypto)
+
+Important notes
+
+Since the object of this challenge is to hack the protocol, do not try to discover the flag by reversing the binary. Be advised - we did not prepare the binary to be a fair crackme exercise that you can reasonably solve within the time allotted for the CTF. If you try to reverse it during the CTF, you will be probably be miserable. Treat the binary as a black box, and concentrate on the protocol instead. It's much less difficult. You have been given fair warning. Also note that the binary runs very inefficiently due to the heavy obfuscation. It takes about 3 seconds to process a single message.
+
+There may be multiple ways to break the protocol, but there is one way in particular that is very straightforward to implement, deterministic, and devastatingly effective.
+Download the file
+
+Extract the downloaded file by using the following password.
+Optional: Check integrity of 7z file by comparing file SHA256 checksum.
+Command to check SHA256 checksum:
+Linux: sha256sum filename.7z
+Windows: certUtil -hashfile filename.7z SHA256
+
+
+> Password: DZw0vs1LBFsVkZGAgTaN
+> SHA256 Checksum: 0401beb9319f170597d57a0ec69f8c5ecd9c0dd07da306ec9ed4e42bb4b9293b
+            

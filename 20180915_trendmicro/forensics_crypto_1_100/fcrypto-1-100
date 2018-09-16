@@ -1,0 +1,21 @@
+
+Challenge
+
+Category: Forensics-crypto1
+Points: 100
+
+Here is the full flag, unfortunately it burnt a bit. I know you can handle it with all the things you know.
+Download the file
+
+Extract the downloaded file by using the following password.
+Optional: Check integrity of 7z file by comparing file SHA256 checksum.
+Command to check SHA256 checksum:
+Linux: sha256sum filename.7z
+Windows: certUtil -hashfile filename.7z SHA256
+
+
+> Password: 917beaEI4XQPhP00mW3o
+> SHA256 Checksum: e747bc2dedafbcf92bd0d6eec6a534040b81432bb1d8fe147c01423ad1a156bb
+            
+
+

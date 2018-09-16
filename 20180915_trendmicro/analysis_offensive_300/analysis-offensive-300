@@ -1,0 +1,22 @@
+
+Challenge
+
+Category: Analysis-offensive
+Points: 300
+
+There is going to be a party tommorow. Eva sent an invitation to her friends. Securely, of course!
+
+Download the message.txt file from the link to check the secure invitation message
+Download the file
+
+Extract the downloaded file by using the following password.
+Optional: Check integrity of 7z file by comparing file SHA256 checksum.
+Command to check SHA256 checksum:
+Linux: sha256sum filename.7z
+Windows: certUtil -hashfile filename.7z SHA256
+
+
+> Password: RdE3p5MZGpSzWGn8a4up
+> SHA256 Checksum: 4314753fc36bd954f4b31bd0df10f720159eeeaad3e25b432909b7446ea4f967
+            
+
