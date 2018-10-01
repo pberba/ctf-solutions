@@ -78,11 +78,12 @@ def tsb_decrypt(aes, msg):
 
 We analyze this in its simplest form where we have 3 block of message. The message would be 48 bytes long: 3 blocks for `IV`, `block`, and `mac`.
 
-![TSB Decryption](TSB Decryption.png)
+
+![TSB Decryption](https://raw.githubusercontent.com/pberba/ctf-solutions/master/20180929_teaser_dragon/aes_128_tsb/TSB%20Decryption.png)
 
 And from this we simply compute the plaintext and mac blocks based from Block A and B.
 
-![TSB Notes](TSB Decryption Notes.png)
+![TSB Notes](https://raw.githubusercontent.com/pberba/ctf-solutions/master/20180929_teaser_dragon/aes_128_tsb/TSB%20Decryption%20Notes.png)
 
 Since we want `IV = mac` then `IV = B`
 
