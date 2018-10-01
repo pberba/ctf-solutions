@@ -1,0 +1,9 @@
+AES-128-TSB (Cryptography, 457)
+
+difficulty: easy (4 solvers)
+
+Haven't you ever thought that GCM mode is overcomplicated and there must be a simpler way to achieve Authenticated Encryption? Here it is!
+
+Server: aes-128-tsb.hackable.software 1337
+
+DrgnS{Thank_god_no_one_deployed_this_on_production}
