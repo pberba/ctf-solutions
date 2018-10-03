@@ -36,13 +36,13 @@ def main(s):
 
 ## Solution Overview
 
-Reading the code, it is easy to see that getting the flag requires as to do two things:  
+Reading the code, it is easy to see that getting the flag requires us to do two things:  
 1. Send an ciphertext that decrypts to `gimme_flag` to get the encrypted flag
 2. Decrypt the flag
 
-Although _AES_ is set to _ECB_, a custom encryption mode is used, with padding. There is also a __decryption oracle__, since we can validate if  `decrypt(cipher)==plaintext`. All these will be used to find craft the desired ciphertext and decrypt the flag.
+Although _AES_ is set to _ECB_, a custom encryption mode is used, with padding. There is also a __decryption oracle__, since we can validate if  `decrypt(cipher)==plaintext`. These will be used to find craft the desired ciphertext and decrypt the flag.
 
-By constructing the ciphertext in the form `(IV, C^IV, IV)` then __the plaintext will always be `plaintext=IV^decrypt(C)` with a proper MAC__.
+By constructing the ciphertext in the form `(IV, C^IV, IV)`, __the plaintext will always be `plaintext=IV^decrypt(C)` with a proper MAC__.
 
 We modify the IV to manipulate the padding and this allows us to brute force the byte by byte. We craft a message with plaintext `gimme_flag` and decrypt the flag.
 
@@ -125,13 +125,13 @@ def unpad(msg):
     return msg[:-ord(msg[-1])]
 ```
 
-If we can set the last byte to `15` then the the result of `unpad(plaintext)` will be just 1 character. This will only take at most 256 attempts to decrypt. If we know the first character we can set the last byte to `14` and this will result with 2 characters and that will only take 256 attempts and so on.
+If we can set the last byte to `15` then the the result of `unpad(plaintext)` will be just 1 character. This will only take at most 256 attempts to decrypt. If we know the first character, we can set the last byte to `14` and this will result with 2 characters. It will only take 256 attempts and so on.
 
 #### Getting the last byte of C
 
 If `msg` is exactly 16 bytes long, then `unpad(msg)` will only return a non-empty string if the value of the last byte is between `1` to `15`. So `decryption_oracle('', payload)` will only return false if the last byte is between 1 to 15.
 
-So if we set the last byte of the IV to `iv_byte` and `decryption_oracle('', payload)` is false then we know that `iv_byte=last_byte^e` where e is in [1 to 15]. If we get the xor of all values of iv_byte, which only has 15 values, that results to the decryption oracle returning true, it is equivalent to getting
+So if we set the last byte of the IV to `iv_byte` and `decryption_oracle('', payload)` is false then we know that `iv_byte=last_byte^e` where e is in [1 to 15]. If we get the xor of all values of iv_byte that results to the decryption oracle returning false, we get the last_byte
 
 ```
 iv_byte_1^iv_byte_2^...^iv_byte_15
