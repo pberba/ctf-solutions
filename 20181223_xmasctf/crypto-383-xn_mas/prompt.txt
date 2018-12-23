@@ -1,0 +1,8 @@
+Xⁿ-Mas
+383
+
+Crypto mecha gnomes love random polynomial functions, can you guess what’s hidden in there?
+
+Server: nc 199.247.6.180 16000
+
+Author: Gabies

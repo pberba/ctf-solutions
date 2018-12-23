@@ -1,0 +1,12 @@
+A white rabbit in a snowstorm
+482
+
+If you didn't know Santa also visits sometime the Hell's Kitchen! He saw a while ago this beautiful pirece of art, a string called A white rabbit in a snowstorm. But it seems something happend to the string, it got encrypted! Help him decrypt the flag so he can enjoy it's beauty again!
+
+Here's the algorithm that was used to encrypt the flag: <des.py>
+
+nc 199.247.6.180 16003
+
+The flag obtained from the challenge must be wrapped up like: X-MAS{flag}
+
+Author: Gabies

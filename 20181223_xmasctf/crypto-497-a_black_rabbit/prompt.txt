@@ -1,0 +1,10 @@
+A black rabbit in the dark
+497
+
+After retrieving the first string Santa Claus found out that there exists a string made by the same author that ended up in the same situation. Now Santa needs your help again!
+
+Here's the algorithm that was used to encrypt the flag: chall
+
+nc 199.247.6.180 16004
+
+Author: Gabies

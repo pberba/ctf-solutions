@@ -1,0 +1,10 @@
+Santa's Secret B(i)smuth
+498
+
+Samba's Union have found some of Santa's ancient and most valuable secrets. Luckily, they are encrypted, even so, you must be quick enough to retrieve them before the Sambas do!
+
+Sadly, Santa does not remember the encryption scheme, he does remember though that it had something to do with bismuth, or was it something else...?
+
+flag.enc
+
+Author: Gabies

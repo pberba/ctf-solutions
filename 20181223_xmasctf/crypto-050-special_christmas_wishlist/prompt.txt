@@ -1,0 +1,12 @@
+Special Christmas Wishlist
+50
+
+While Santa was looking through the wishlists of the childern all around the world he came across a very strange looking one. Help Santa decode the letter in order to fulfill the wishes of this child.
+
+(Flag is Non-Standard)
+
+wishlist.png
+
+UPDATE: flag is lowercase!
+
+Author: Gabies
