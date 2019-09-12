@@ -1,0 +1,28 @@
+Category: Wildcard
+Points: 100
+You have been given a dataset which contains images of digits 3 and 6.
+The dataset contains a total of 34022 images (16768 files being images of digit 3, and the rest being images of digit 6).
+The dataset somehow got randomly mixed, and also contains some duplicate images of each digit.
+Your task is to find the number of unique images of each digit in the dataset.
+
+The steps of the challenge are:
+
+1. Since the images are randomly mixed, we need a way to separate the images of digits 3 and 6 from each other. You can use a clustering algorithm for this purpose.
+
+2. Figure out which digit belongs to which cluster.
+
+3. Count the number of unique images in each cluster, and form the flag.
+
+(Note if x is the number of unique images of digit 3, and y is the number of unique images of digit 6, then the flag will be TMCTF{x_y})
+
+Download the file
+Extract the downloaded file by using the following password.
+Optional: Check integrity of 7z file by comparing file SHA256 checksum.
+Command to check SHA256 checksum:
+Linux: sha256sum filename.7z
+Windows: certUtil -hashfile filename.7z SHA256
+
+
+> Password: bfF0zdtn4CpcQq1VFqUL
+> SHA256 Checksum: 772e15c6bbe830bb9a4c6b1beb877da021fbea889e9a201fc9075ee5767f8849
+            

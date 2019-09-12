@@ -1,0 +1,19 @@
+Category: Iot
+Points: 100
+Wiretap
+
+You have obtained a part of documentation for a "top secret" flag generator device. The documentation includes a part of device firmware source code and a log from a logical analyzer. We suppose the log captured the communication between the microcontroller and the OLED display module
+
+Can you retrieve the flag using the information provided?
+
+Download the file
+Extract the downloaded file by using the following password.
+Optional: Check integrity of 7z file by comparing file SHA256 checksum.
+Command to check SHA256 checksum:
+Linux: sha256sum filename.7z
+Windows: certUtil -hashfile filename.7z SHA256
+
+
+> Password: FTIyFedHUVvwzegGPCi6
+> SHA256 Checksum: 92cea09299760ec4ad563850e36daaf0f0dabdcb8e2707ef655f2fbbee684eb5
+            
