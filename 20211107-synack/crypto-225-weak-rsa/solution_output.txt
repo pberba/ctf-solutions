@@ -1,0 +1,22 @@
+(venv) kali@kali:~/Desktop/synack/crypto/weak$ /opt/RsaCtfTool/RsaCtfTool.py --publickey "pubkey.pem" --uncipherfile flag.enc
+private argument is not set, the private key will not be displayed, even if recovered.
+
+[*] Testing key pubkey.pem.
+[*] Performing pastctfprimes attack on pubkey.pem.
+100%|███████████████████████████████████████████████████████████████████████| 113/113 [00:00<00:00, 691907.08it/s]
+[*] Performing system_primes_gcd attack on pubkey.pem.
+100%|█████████████████████████████████████████████████████████████████████| 7007/7007 [00:00<00:00, 814835.54it/s]
+[*] Performing mersenne_primes attack on pubkey.pem.
+ 27%|████████████████████                                                     | 14/51 [00:00<00:00, 351618.30it/s]
+[*] Performing smallq attack on pubkey.pem.
+[*] Performing factordb attack on pubkey.pem.
+[*] Attack success with factordb method !
+
+Results for pubkey.pem:
+
+Unciphered data :
+HEX : 0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004854427b6231365f655f356d346c6c5f645f337175346c355f7733316e33725f34373734636b7d
+INT (big endian) : 2357392946640097540211419645858895520810208771688666037754674144921765688545923475455795751805
+INT (little endian) : 22546574263662123411523113128044215139929103295256955398886722465953163007000026640058669241937130344552566514396588140080195580660405015242202668398374037246444419998235653404182362721762856885981820839225967889839162532460437518669392406390949281459764025707163465962902177848023467525069105766717294567751680
+utf-8 : HTB{b16_e_5m4ll_d_3qu4l5_w31n3r_4774ck}
+STR : b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00HTB{b16_e_5m4ll_d_3qu4l5_w31n3r_4774ck}'
